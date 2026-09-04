@@ -13,11 +13,26 @@ $mensagem = "batatinha frita";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula git</title>
 </head>
+
 <body>
     <h1><?php echo $nome ?></h1>
 
     <h2><?php echo $profissao ?></h2>
 
     <p><?php echo $mensagem ?></p>
+
+    <h1 id="valor">0</h1>
+    <button id="mais">+</button>
 </body>
 </html>
+
+<script>
+        let contador = 0;
+        const valor = document.getElementById("valor");
+        const aumentar = document.getElementById("mais");
+
+        aumentar.addEventListener("click", () => {
+            contador++;
+            valor.textContent = contador;
+        });
+    </script>
